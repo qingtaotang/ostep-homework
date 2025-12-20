@@ -96,6 +96,7 @@ including the redundant information):
     VA  0: 0x0000020b (decimal:  523) --> SEGMENTATION VIOLATION (SEG1)
     VA  1: 0x0000019e (decimal:  414) --> VALID in SEG0: 0x00001c88 (decimal: 7304)
     VA  2: 0x00000322 (decimal:  802) --> VALID in SEG1: 0x00001176 (decimal: 4470)
+        #$$802 - 1024 = -222$$,4692-222=4470
     VA  3: 0x00000136 (decimal:  310) --> VALID in SEG0: 0x00001c20 (decimal: 7200)
     VA  4: 0x000001e8 (decimal:  488) --> SEGMENTATION VIOLATION (SEG0)
 ```

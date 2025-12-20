@@ -14,7 +14,7 @@ works. Here are the options that you have at your disposal:
   -H HEADERSIZE, --headerSize=HEADERSIZE
                         size of the header
   -a ALIGNMENT, --alignment=ALIGNMENT
-                        align allocated units to size; -1->no align
+                        align allocated units to size; -1->no align（notice this parameters!）
   -p POLICY, --policy=POLICY
                         list search (BEST, WORST, FIRST)
   -l ORDER, --listOrder=ORDER
@@ -30,6 +30,8 @@ works. Here are the options that you have at your disposal:
                         instead of random, list of ops (+10,-0,etc)
   -c, --compute         compute answers for me
 ```
+
+$$实际消耗大小 = \text{Header大小} + \text{对齐后的Payload大小}$$
 
 One way to use it is to have the program generate some random allocation/free
 operations and for you to see if you can figure out what the free list would
