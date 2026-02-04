@@ -10,8 +10,8 @@ void* worker(void* arg) {
 	Pthread_mutex_lock(&m1);
 	Pthread_mutex_lock(&m2);
     } else {
-	Pthread_mutex_lock(&m2);
-	Pthread_mutex_lock(&m1);
+	Pthread_mutex_lock(&m2);//锁顺序不一致的问题，这可能导致死锁。
+    Pthread_mutex_lock(&m1);
     }
     Pthread_mutex_unlock(&m1);
     Pthread_mutex_unlock(&m2);

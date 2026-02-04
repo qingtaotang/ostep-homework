@@ -13,7 +13,9 @@ void* worker(void* arg) {
 int main(int argc, char *argv[]) {
     pthread_t p;
     Pthread_create(&p, NULL, worker, NULL);
-    while (done == 0)
+    while (done == 0)//Busy-waiting burns CPU cycles: The loop repeatedly reads done as fast as the CPU allows,
+    // using 100% of a core while waiting. 
+    // That wastes CPU time and power that could be used for useful work or to let other processes ru
 	;
     printf("this should print last\n");
     return 0;

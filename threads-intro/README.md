@@ -128,7 +128,7 @@ halt
 A few things have been introduced here. First is the `test` instruction.
 This instruction takes two arguments and compares them; it then sets implicit
 "condition codes" (kind of like 1-bit registers) which subsequent instructions
-can act upon.
+can act upon.(同时计算出，>=,>,<=,<,！=，==多种比较，攻下条指令使用)
 
 In this case, the other new instruction is the `jump` instruction (in this
 case, `jgte` which stands for "jump if greater than or equal to"). This
